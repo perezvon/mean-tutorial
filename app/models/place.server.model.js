@@ -7,20 +7,14 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 /**
- * Product Schema
+ * Place Schema
  */
-var ProductSchema = new Schema({
+var PlaceSchema = new Schema({
 	name: {
 		type: String,
 		default: '',
-		required: 'Please fill Product name',
+		required: 'Please fill Place name',
 		trim: true
-	},
-	category: {
-	type: String,
-	default: '',
-	required: 'Please choose a Category',
-	trim: true
 	},
 	created: {
 		type: Date,
@@ -32,4 +26,4 @@ var ProductSchema = new Schema({
 	}
 });
 
-mongoose.model('Product', ProductSchema);
+mongoose.model('Place', PlaceSchema);

@@ -7,20 +7,14 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 /**
- * Product Schema
+ * Inv code Schema
  */
-var ProductSchema = new Schema({
+var InvCodeSchema = new Schema({
 	name: {
 		type: String,
 		default: '',
-		required: 'Please fill Product name',
+		required: 'Please fill Inv code name',
 		trim: true
-	},
-	category: {
-	type: String,
-	default: '',
-	required: 'Please choose a Category',
-	trim: true
 	},
 	created: {
 		type: Date,
@@ -32,4 +26,4 @@ var ProductSchema = new Schema({
 	}
 });
 
-mongoose.model('Product', ProductSchema);
+mongoose.model('InvCode', InvCodeSchema);

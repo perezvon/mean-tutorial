@@ -9,7 +9,8 @@ angular.module('products').controller('ProductsController', ['$scope', '$statePa
 		$scope.create = function() {
 			// Create new Product object
 			var product = new Products ({
-				name: this.name
+				name: this.name,
+				category: this.category
 			});
 
 			// Redirect after save
@@ -62,5 +63,12 @@ angular.module('products').controller('ProductsController', ['$scope', '$statePa
 				productId: $stateParams.productId
 			});
 		};
+		
+		        // Search for a Product
+        $scope.productSearch = function(product) {
+            $location.path('products/' + product._id);
+        };
 	}
+	
+	
 ]);

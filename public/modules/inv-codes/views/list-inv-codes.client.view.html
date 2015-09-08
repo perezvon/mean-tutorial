@@ -1,0 +1,19 @@
+<section data-ng-controller="InvCodesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Inv codes</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="invCode in invCodes" data-ng-href="#!/inv-codes/{{invCode._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="invCode.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="invCode.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="invCode.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!invCodes.$resolved || invCodes.length">
+    	No Inv codes yet, why don't you <a href="/#!/inv-codes/create">create one</a>?
+    </div>
+</section>

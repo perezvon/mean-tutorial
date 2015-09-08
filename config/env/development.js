@@ -3,7 +3,7 @@
 module.exports = {
 	db: 'mongodb://localhost/northwindnode-dev',
 	app: {
-		title: 'northwindnode - Development Environment'
+		title: 'Calihan Order Guide - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',

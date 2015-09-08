@@ -4,7 +4,7 @@ module.exports = {
 	db: 'mongodb://localhost/northwindnode-test',
 	port: 3001,
 	app: {
-		title: 'northwindnode - Test Environment'
+		title: 'Calihan Order Guide - Test Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
